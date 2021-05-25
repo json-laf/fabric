@@ -68,7 +68,7 @@ func (s *Commit) CreateStudentInfo(ctx contractapi.TransactionContextInterface, 
                 Msg: msg,
         }
         CommitInfoAsBytes, _ := json.Marshal(CommitInfo)
-        return ctx.GetStub().PutState(CommitInfo.hash, CommitInfoAsBytes)
+        return ctx.GetStub().PutState(CommitInfo.Hash, CommitInfoAsBytes)
 }
 
 //查询commit信息
